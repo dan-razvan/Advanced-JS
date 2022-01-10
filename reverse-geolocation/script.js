@@ -42,27 +42,22 @@ const getJSON = (url, errorMessage = "Something went wrong: ") => {
 }
 
 
-const whereAmI = (lon, lat) => {
+const whereAmI = (lat, lon) => {
   fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${lon}&apiKey=e005df882bf54bc9aff30fb2c8ac6740`)
   // fetch(`curl 'https://geocode.xyz/${lat},${lon}?geoit=json'`)
 
-.then(response => {
-console.log(response)
-console.log(response.ok)
-if(!response.ok) {
-   throw new Error ("Number of requests exceeded.")
-}
-return response.json()
-})
-.then(data => {
-  console.log(data, "sadas")
-  console.log(`You are in ${data.features[0].properties.city}, ${data.features[0].properties.country}`)
-  getCountryData(data.features[0].properties.country)
-  
-})
-.catch(err => {
-  console.error(`Something went wrong: ${err.message}`)
-})
+  .then(response => {
+    if(!response.ok) {
+      throw new Error (`Problem with geocoding. (${response.status})`)
+    }
+    return response.json()
+   })
+  .then(data => {
+    getCountryData(data.features[0].properties.country)
+  })
+  .catch(err => {
+    console.error(`Something went wrong: ${err.message}`)
+  })
 }
 
 const getCountryData = (country) => {
@@ -78,7 +73,6 @@ const getCountryData = (country) => {
     console.log(neighbour)
 
     if(!neighbour) {
-      console.log("Where the neighbour bro?")
       throw new Error("No neighbour")
     }
     return getJSON(`https://restcountries.com/v3.1/alpha/${neighbour}`, "Country not found")
