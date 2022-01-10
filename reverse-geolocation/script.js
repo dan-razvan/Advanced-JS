@@ -98,7 +98,6 @@ const getCountryData = (country) => {
 
 btn.addEventListener("click", ()=> {
   let lat = document.querySelector(".lat").value
-  console.log(lat)
   let lon = document.querySelector(".lon").value
   whereAmI(lat, lon)
 })
