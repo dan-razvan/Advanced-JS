@@ -1,4 +1,4 @@
-
+// import {title,rating, carousel} from "../components/poster.mjs"
 
 class TMDBService {
 
@@ -7,14 +7,21 @@ class TMDBService {
     this.baseUrl = "https://api.themoviedb.org/3"
   }
 
-  get(options) {
+  get({method, url, onSuccess}) {
     let xhr = new XMLHttpRequest();
-    xhr.open(`${options.method}`, `${this.baseUrl}${options.url}${this.accessKey}`);
+    xhr.open(`${method}`, `${this.baseUrl}${url}${this.accessKey}`);
     xhr.send();
     xhr.addEventListener("load", () => {
-      const data = xhr.responseText;
-      options.onSuccess(data)
+      const data = JSON.parse(xhr.responseText);
+      // options.onSuccess(data.results.map(res=>res.release_date))
+      onSuccess(data)
+      // onSuccess(data.results.map(res=>res.poster_path))
+
     })
+  }
+
+  set (options) {
+
   }
 
 

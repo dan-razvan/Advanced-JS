@@ -1,0 +1,89 @@
+body {
+  background-color: #555;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.card {
+  background-color: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px #999;
+  height: 420px;
+  width: 700px;
+  transition: transform 300ms ease;
+}
+
+
+
+.poster-container {
+  height: 440px;
+  width: 100%;
+  background-image: url(https://image.tmdb.org/t/p/w500/xQdPoQuEOoSpT1cRrc8Gbt7leWG.jpg);
+  background-size:cover;
+  position: relative;
+
+}
+
+.poster-content {
+  height: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1)
+  );
+  
+}
+
+.after-poster {
+  padding-left: 1.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  height: 23%;
+  background-color: #333;
+}
+
+.title {
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+  color: #fff;
+  position: absolute;
+  font-size: 1.5rem;
+  top: 90%;
+  left: 4%;
+  /* text-shadow: 2px 2px 3px #000; */
+
+}
+
+.card:hover {
+  box-shadow: 1px 1px 11px #333;
+  position: absolute;
+  transform: scale(1.01);
+  font-size: 2.6rem;
+
+
+}
+.rating-container { 
+  display: flex;
+  padding: 8px 30px;
+
+}
+
+.rating {
+  /* color: #fff; */
+  margin: -7px 10px;
+
+}
+.checked {
+  color: orange;
+  /* margin-top: 15px; */
+  /* padding-left: 5px; */
+  /* font-size: 200px; */
+}
