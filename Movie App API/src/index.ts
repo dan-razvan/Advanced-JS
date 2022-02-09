@@ -1,7 +1,10 @@
-let message: string = "This is my app running"
+import PopularMovies from "./components/PopularMovies";
 
+const movieDiv = document.getElementById("popular-movies")
 
+// console.log(movieDiv.parentElement)
+const popularMovies = new PopularMovies(movieDiv);
+ 
 
-console.log(message)
 
 
