@@ -85,7 +85,7 @@ export default class PopularMovies {
         this.rootElement.innerHTML = `
              
                
-                  <img class="d-block w-100" src="https://image.tmdb.org/t/p/w300/${movies[0].poster}" alt="Second slide">
+                  <img class="d-block w-100" src="https://image.tmdb.org/t/p/w400/${movies[0].poster}" alt="Second slide">
                   
                   <div class="movie-details">
                     <div class="title">
@@ -106,7 +106,7 @@ export default class PopularMovies {
           this.rootElement.innerHTML = `
              
                
-                  <img class="d-block w-100" src="https://image.tmdb.org/t/p/w300/${movies[i].poster}" alt="Second slide">
+                  <img class="the-poster" src="https://image.tmdb.org/t/p/w400/${movies[i].poster}" alt="Second slide">
                   
                   <div class="movie-details">
                     <div class="title">
@@ -122,7 +122,7 @@ export default class PopularMovies {
               
           `
         })
-      // }
+      // } 
   }
 
   }

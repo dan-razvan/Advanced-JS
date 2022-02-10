@@ -15,15 +15,15 @@ body {
 }
 
 .left-arrow-container {
-  height: 25px;
-  width: 25px;
-  background-color: red;
-  margin-right: -35px;
-  z-index: 1;
+  /* height: 25px;
+  width: 25px; */
+  /* background-color: red; */
+  /* margin-right: -35px;
+  z-index: 1; */
 }
 .carousel {
   display: flex;
-  width: 300px;
+  width: 400px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -32,13 +32,13 @@ body {
   border-radius: 10px;
   
 }
-
+/* 
 .right-arrow-container {
   height: 25px;
   width: 25px;
   background-color: red;
   margin-left: -35px;
-}
+} */
 
 .movie-details {
   width: 300px;
@@ -54,6 +54,8 @@ body {
   margin-bottom: 10px;
 }
 
-img {
+.the-poster {
   border-radius: 10px;
+  width: 400px;
 }
+
