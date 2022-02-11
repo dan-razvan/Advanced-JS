@@ -6,7 +6,7 @@
 body {
   background-color: #f7f7f7;
   font-family: sans-serif;
-  /* height: 300px; */
+
 }
 
 .container {
@@ -15,33 +15,18 @@ body {
   align-items: center;
 }
 
-.arrow {
-  cursor: pointer;
-  background-color: rgba(76, 94, 112, 0.7);
-  width: 50px;
-  height: 50px;
-  position: relative;
-  /* text-align: center; */
-  border-radius: 50%;
-  
-}
 .carousel {
   display: flex;
   width: 400px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-
   border-radius: 10px;
-
   background: linear-gradient(
     hsl(0 0% 0% / 0),
     hsl(20 0% 0% / 0.3) 20%,
     hsl(0 0% 0% / 1)
-    
   );
-  
 }
 
 .poster-content {
@@ -70,6 +55,16 @@ body {
 
 img {
   border-radius: 10px;;
+}
+
+.arrow {
+  cursor: pointer;
+  background-color: rgba(76, 94, 112, 0.7);
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-radius: 50%;
+  
 }
 
 .left-arrow-container {
