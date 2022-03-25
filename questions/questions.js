@@ -1,6 +1,10 @@
 1. Ce numim o componenta in react?
+   
+   In general in react, o componenta este o bucata de cod, fie functie sau clasa care o separam de restul aplicatiei si pe care o putem folosi unde este nevoie de eval.
 
 2. Cum "fabricam" o componenta?
+
+   O "fabricam" printr-o clasa sau functie. Codul avem grija sa fie astfel scris incat componenta sa poata fi refolosita. 
 
 3. Rescrieti acest cod <MyComponent property="value" /> fara utilizarea sintaxei JSX
 
@@ -15,6 +19,8 @@
 Raspuns final: c. <MyComponent value={1000} />
 
 6. In ce caz o componenta in JSX este scrisa cu PAIRED TAG?
+   
+   Scriem cu pair tag atunci cand componenta contine componente copil.
 
 7. Rescrieti urmatorul cod (unde componenta Child este inclusa in componenta Parent de 3 ori) utilizand doar SINGLE TAG pentru "Parent"!!! in JSX
 
